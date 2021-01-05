@@ -17,6 +17,12 @@ table thead tr {
   text-align: left;
 }
 
+table thead tr.legend,
+table thead tr.legend th {
+  border: 1px solid #ebebeb;
+  text-align: center;
+}
+
 table thead tr th.type {
   background-color: #3498db;
   color: #ffffff;
