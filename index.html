@@ -1,68 +1,75 @@
-<title>JavaScript Key Codes</title>
+<html>
 
-<div class="git-ribbon">
-	<a href="https://github.com/atapas/js-keycodes-demo"
-		target="_blank"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-</div>
+<head>
+	<title>JavaScript Key Codes</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
 
-<div id="app" class="container">
+<body>
+	<div class="git-ribbon">
+		<a href="https://github.com/atapas/js-keycodes-demo" target="_blank"><img loading="lazy" width="149"
+			height="149"
+			src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149"
+			class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	</div>
 
+	<div id="app" class="container">
+		<h1>👋 JavaScript KeyboardEvent and Key Codes</h1>
+		<div id="key">
+			<div class="filter">
+				Filter by:
+				<input type="checkbox" id="keydown-cb-id" name="keydown-cb" checked>
+				<label for="keydown-cb-id">Keydown</label>
 
-	<h1>👋 JavaScript KeyboardEvent and Key Codes</h1>
-	<div id="key">
-		<div class="filter">
-			Filter by:
-			<input type="checkbox" id="keydown-cb-id" name="keydown-cb"
-        checked>
-			<label for="keydown-cb-id">Keydown</label>
+				<input type="checkbox" id="keypress-cb-id" name="keypress-cb" checked>
+				<label for="keypress-cb-id">Keypress</label>
 
-			<input type="checkbox" id="keypress-cb-id" name="keypress-cb"
-        checked>
-			<label for="keypress-cb-id">Keypress</label>
-
-			<input type="checkbox" id="keyup-cb-id" name="keyup-cb"
-        checked>
-			<label for="keyup-cb-id">Keyup</label>
-		</div>
-		<div class="hint">
-			Hint: The above filtering reflects from the next key type.
-		</div>
-
-		<div class="results">
-			<div class="clearAll">
-				<a href="#" id="clear-all-id">Clear All</a>
+				<input type="checkbox" id="keyup-cb-id" name="keyup-cb" checked>
+				<label for="keyup-cb-id">Keyup</label>
 			</div>
-			<div class="note">
-				<h2>Focus Anywhere and Type Any Key ⌨️</h2>
+			<div class="hint">
+				Hint: The above filtering reflects from the next key type.
 			</div>
 
-			<div class="note key" id="key-id"></div>
-			<table id="event-table">
-				<thead>
-					<tr class="legend">
-						<th></th>
-						<th colspan="2" class="legacy">Legacy</th>
-						<th colspan="2" class="current">Current</th>
-						<th colspan="5" class="modifier">Modifiers</th>
-					</tr>
-					<tr>
-						<th class="type">Event Type</th>
-						<th class="legacy">event.which</th>
-						<th class="legacy">event.keyCode</th>
-						<th class="current">Key</th>
-						<th class="current">Code</th>
-						<th class="modifier">Shift Key?</th>
-						<th class="modifier">Alt Key?</th>
-						<th class="modifier">Control Key?</th>
-						<th class="modifier">Meta Key?</th>
-						<th class="modifier">Modifier State</th>
-					</tr>
-				</thead>
-				<tbody id="event-table-body">
+			<div class="results">
+				<div class="clearAll">
+					<a href="#" id="clear-all-id">Clear All</a>
+				</div>
+				<div class="note">
+					<h2>Focus Anywhere and Type Any Key ⌨️</h2>
+				</div>
 
-				</tbody>
-			</table>
+				<div class="note key" id="key-id"></div>
+				<table id="event-table">
+					<thead>
+						<tr class="legend">
+							<th></th>
+							<th colspan="2" class="legacy">Legacy</th>
+							<th colspan="2" class="current">Current</th>
+							<th colspan="5" class="modifier">Modifiers</th>
+						</tr>
+						<tr>
+							<th class="type">Event Type</th>
+							<th class="legacy">event.which</th>
+							<th class="legacy">event.keyCode</th>
+							<th class="current">Key</th>
+							<th class="current">Code</th>
+							<th class="modifier">Shift Key?</th>
+							<th class="modifier">Alt Key?</th>
+							<th class="modifier">Control Key?</th>
+							<th class="modifier">Meta Key?</th>
+							<th class="modifier">Modifier State</th>
+						</tr>
+					</thead>
+					<tbody id="event-table-body">
+
+					</tbody>
+				</table>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-</div>
+	<script src="./index.js" />
+</body>
+
+</html>
