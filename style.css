@@ -14,9 +14,27 @@ table {
 }
 
 table thead tr {
+  text-align: left;
+}
+
+table thead tr th.type {
   background-color: #3498db;
   color: #ffffff;
-  text-align: left;
+}
+
+table thead tr th.legacy {
+  background-color: #f8f3ef;
+  color: #000000;
+}
+
+table thead tr th.current {
+  background-color: #62da2a;
+  color: #000000;
+}
+
+table thead tr th.modifier {
+  background-color: #db347a;
+  color: #ffffff;
 }
 
 table th,
