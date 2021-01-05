@@ -55,7 +55,7 @@ function addRow(event) {
   ];
   for (let counter = 0; counter <= data.length - 1; counter++) {
     const cell = row.insertCell(counter);
-    cell.innerHTML = `<span>${data[counter]}</span>`;
+    cell.innerHTML = `<span class='v-${data[counter]}'>${data[counter]}</span>`;
   }
 }
 

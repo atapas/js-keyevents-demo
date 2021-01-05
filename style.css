@@ -90,3 +90,11 @@ table tbody tr.active-row {
 .filter {
   margin-left: 5px;
 }
+
+.v-false {
+  color: #ec8282;
+}
+
+.v-true {
+  color: green;
+}
