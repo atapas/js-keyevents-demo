@@ -68,3 +68,7 @@ table tbody tr.active-row {
   display: flex;
   justify-content: center;
 }
+
+.filter {
+  margin-left: 5px;
+}
