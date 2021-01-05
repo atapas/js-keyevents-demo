@@ -19,7 +19,7 @@ table thead tr {
 
 table thead tr.legend,
 table thead tr.legend th {
-  border: 1px solid #ebebeb;
+  border: 1px solid #ffffff;
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ table thead tr th.current {
 }
 
 table thead tr th.modifier {
-  background-color: #db347a;
+  background-color: #e7ad09;
   color: #ffffff;
 }
 
@@ -71,6 +71,10 @@ table tbody tr.active-row {
 
 .key mark {
   font-size: 60px;
+  background-color: #ec10d1;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 .hint {
