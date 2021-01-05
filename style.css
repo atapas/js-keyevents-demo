@@ -108,3 +108,9 @@ table tbody tr.active-row {
 .v-true {
   color: green;
 }
+
+.git-ribbon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
