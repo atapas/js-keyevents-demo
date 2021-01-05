@@ -1,0 +1,53 @@
+<title>JavaScript Key Codes</title>
+<div id="app" class="container">
+
+	<h1>👋 JavaScript Event Keys and Key Codes</h1>
+	<div id="key">
+		<div>
+			<input type="checkbox" id="keydown-cb-id" name="keydown-cb"
+         checked>
+			<label for="keydown-cb-id">Keydown</label>
+
+			<input type="checkbox" id="keypress-cb-id" name="keypress-cb"
+         checked>
+			<label for="keypress-cb-id">Keypress</label>
+
+			<input type="checkbox" id="keyup-cb-id" name="keyup-cb"
+         checked>
+			<label for="keyup-cb-id">Keyup</label>
+		</div>
+		<div class="hint">
+			Hint: The above filtering reflects from the next key type.
+		</div>
+
+		<div class="results">
+			<div class="clearAll">
+				<a href="#" id="clear-all-id">Clear All</a>
+			</div>
+			<div class="note">
+				<h2>Focus Anywhere and Type Any Key ⌨️</h2>
+			</div>
+
+			<div class="note key" id="key-id"></div>
+			<table id="event-table">
+				<thead>
+					<tr>
+						<th>Event Type</th>
+						<th>Key</th>
+						<th>event.which</th>
+						<th>event.keyCode</th>
+						<th>event.code</th>
+						<th>Shift Key?</th>
+						<th>Alt Key?</th>
+						<th>Control Key?</th>
+						<th>Meta Key?</th>
+					</tr>
+				</thead>
+				<tbody id="event-table-body">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>
