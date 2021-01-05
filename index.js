@@ -11,24 +11,21 @@ function addRow(event) {
   document.getElementById("key-id").innerHTML = `<mark>${event.key}</mark>`;
   const curIndx = document.getElementById("event-table-body").rows.length;
   const row = document.getElementById("event-table-body").insertRow(curIndx);
-  const cell0 = row.insertCell(0);
-  const cell1 = row.insertCell(1);
-  const cell2 = row.insertCell(2);
-  const cell3 = row.insertCell(3);
-  const cell4 = row.insertCell(4);
-  const cell5 = row.insertCell(5);
-  const cell6 = row.insertCell(6);
-  const cell7 = row.insertCell(7);
-  const cell8 = row.insertCell(8);
-  cell0.innerHTML = `<span>${event.type}</span>`;
-  cell1.innerHTML = `<span>${event.key}</span>`;
-  cell2.innerHTML = `<span>${event.which}</span>`;
-  cell3.innerHTML = `<span>${event.keyCode}</span>`;
-  cell4.innerHTML = `<span>${event.code}</span>`;
-  cell5.innerHTML = `<span>${event.shiftKey}</span>`;
-  cell6.innerHTML = `<span>${event.altKey}</span>`;
-  cell7.innerHTML = `<span>${event.ctrlKey}</span>`;
-  cell8.innerHTML = `<span>${event.metaKey}</span>`;
+  const data = [
+    event.type,
+    event.which,
+    event.keyCode,
+    event.key,
+    event.code,
+    event.shiftKey,
+    event.altKey,
+    event.ctrlKey,
+    event.metaKey
+  ];
+  for (let counter = 0; counter <= data.length - 1; counter++) {
+    const cell = row.insertCell(counter);
+    cell.innerHTML = `<span>${data[counter]}</span>`;
+  }
 }
 
 const clearAll = event => {
