@@ -7,6 +7,36 @@ let keydownOn = true;
 let keypressOn = true;
 let keyupOn = true;
 
+function getModifierState(event) {
+  let modifier = "";
+  if (
+    event.getModifierState("ScrollLock") ||
+    event.getModifierState("Scroll")
+  ) {
+    modifier = modifier + "ScrollLock" + " ";
+  }
+  if (event.getModifierState("Control")) {
+    modifier = modifier + "Control" + " ";
+  }
+  if (event.getModifierState("Alt")) {
+    modifier = modifier + "Alt" + " ";
+  }
+  if (event.getModifierState("Meta")) {
+    modifier = modifier + "Meta" + " ";
+  }
+  if (event.getModifierState("Shift")) {
+    modifier = modifier + "Shift" + " ";
+  }
+  if (event.getModifierState("NumLock")) {
+    modifier = modifier + "NumLock" + " ";
+  }
+  if (event.getModifierState("CapsLock")) {
+    modifier = modifier + "CapsLock" + " ";
+  }
+
+  return modifier;
+}
+
 function addRow(event) {
   document.getElementById("key-id").innerHTML = `<mark>${event.key}</mark>`;
   const curIndx = document.getElementById("event-table-body").rows.length;
@@ -20,7 +50,8 @@ function addRow(event) {
     event.shiftKey,
     event.altKey,
     event.ctrlKey,
-    event.metaKey
+    event.metaKey,
+    getModifierState(event)
   ];
   for (let counter = 0; counter <= data.length - 1; counter++) {
     const cell = row.insertCell(counter);
