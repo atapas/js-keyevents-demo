@@ -57,6 +57,7 @@ function addRow(event) {
     const cell = row.insertCell(counter);
     cell.innerHTML = `<span class='v-${data[counter]}'>${data[counter]}</span>`;
   }
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 const clearAll = event => {
