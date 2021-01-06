@@ -1,7 +1,4 @@
 
-
-// Write Javascript code!
-
 let keydownOn = true;
 let keypressOn = true;
 let keyupOn = true;
@@ -50,7 +47,7 @@ function addRow(event) {
     event.altKey,
     event.ctrlKey,
     event.metaKey,
-    getModifierState(event)
+    getModifierState(event),
   ];
   for (let counter = 0; counter <= data.length - 1; counter++) {
     const cell = row.insertCell(counter);
@@ -59,43 +56,43 @@ function addRow(event) {
   window.scrollTo(0, document.body.scrollHeight);
 }
 
-const clearAll = event => {
+const clearAll = (event) => {
   document.getElementById("event-table-body").innerHTML = "";
   document.getElementById("key-id").innerHTML = "";
 };
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
   keydownOn && addRow(event);
 });
 
-document.addEventListener("keyup", function(event) {
+document.addEventListener("keyup", function (event) {
   keyupOn && addRow(event);
 });
 
-document.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", function (event) {
   keypressOn && addRow(event);
 });
 
 document
   .getElementById("clear-all-id")
-  .addEventListener("click", function(event) {
+  .addEventListener("click", function (event) {
     clearAll(event);
-  });
+});
 
 document
   .getElementById("keydown-cb-id")
-  .addEventListener("click", function(event) {
+  .addEventListener("click", function (event) {
     keydownOn = document.getElementById("keydown-cb-id").checked;
-  });
+});
 
 document
   .getElementById("keypress-cb-id")
-  .addEventListener("click", function(event) {
+  .addEventListener("click", function (event) {
     keypressOn = document.getElementById("keypress-cb-id").checked;
-  });
+});
 
 document
   .getElementById("keyup-cb-id")
-  .addEventListener("click", function(event) {
+  .addEventListener("click", function (event) {
     keyupOn = document.getElementById("keyup-cb-id").checked;
-  });
+});
