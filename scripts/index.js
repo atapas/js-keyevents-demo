@@ -41,6 +41,7 @@ function addRow(event) {
     event.type,
     event.which,
     event.keyCode,
+    event.charCode,
     event.key,
     event.code,
     event.shiftKey,
@@ -53,23 +54,24 @@ function addRow(event) {
     const cell = row.insertCell(counter);
     cell.innerHTML = `<span class='v-${data[counter]}'>${data[counter]}</span>`;
   }
-  window.scrollTo(0, document.body.scrollHeight);
+  // window.scrollTo(0, document.body.scrollHeight);
 }
 
 const clearAll = (event) => {
   document.getElementById("event-table-body").innerHTML = "";
   document.getElementById("key-id").innerHTML = "";
+  document.getElementById('type-here').value = '';
 };
 
-document.addEventListener("keydown", function (event) {
+document.getElementById('type-here').addEventListener("keydown", function (event) {
   keydownOn && addRow(event);
 });
 
-document.addEventListener("keyup", function (event) {
+document.getElementById('type-here').addEventListener("keyup", function (event) {
   keyupOn && addRow(event);
 });
 
-document.addEventListener("keypress", function (event) {
+document.getElementById('type-here').addEventListener("keypress", function (event) {
   keypressOn && addRow(event);
 });
 
@@ -96,3 +98,7 @@ document
   .addEventListener("click", function (event) {
     keyupOn = document.getElementById("keyup-cb-id").checked;
 });
+
+window.onload = function() {
+  document.getElementById("type-here").focus();
+};

@@ -36,7 +36,11 @@
 					<a href="#" id="clear-all-id">Clear All</a>
 				</div>
 				<div class="note">
-					<h2>Focus Anywhere and Type Any Key ⌨️</h2>
+					<input 
+						type="text" 
+						id="type-here" 
+						placeholder="Type Any Keys ⌨️"
+						class="input-here"/>
 				</div>
 
 				<div class="note key" id="key-id"></div>
@@ -44,7 +48,7 @@
 					<thead>
 						<tr class="legend">
 							<th></th>
-							<th colspan="2" class="legacy">Legacy</th>
+							<th colspan="3" class="legacy">Legacy/Obsolete</th>
 							<th colspan="2" class="current">Current</th>
 							<th colspan="5" class="modifier">Modifiers</th>
 						</tr>
@@ -52,6 +56,7 @@
 							<th class="type">Event Type</th>
 							<th class="legacy">event.which</th>
 							<th class="legacy">event.keyCode</th>
+							<th class="legacy">event.charCode</th>
 							<th class="current">Key</th>
 							<th class="current">Code</th>
 							<th class="modifier">Shift Key?</th>

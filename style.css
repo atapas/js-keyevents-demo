@@ -114,3 +114,16 @@ table tbody tr.active-row {
   right: 0;
   top: 0;
 }
+
+.input-here {
+  width: 80%;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000000;
+  background-color: #ebebeb;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
