@@ -10,6 +10,9 @@ Optionally, you can also play around with it from here, [https://stackblitz.com/
 # 👍 Want to Motivate?
 Thanks for your time to reading this. Feel free to clone/fork/improve. Who doesn't want motivations? Give the project a star(⭐) if you liked the work.
 
+# 🖮 A List of Key Codes
+[Click Here](./KEYCODE.md) to see the list of key codes.
+
 # 🏃🏿‍♂️ How to run the project locally?
 - Clone the project to a local directory.
 - Browse to the project folder, `js-keyevents-demo`.
