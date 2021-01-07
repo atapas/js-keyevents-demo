@@ -28,6 +28,7 @@
 | up arrow    | 38                  | ArrowUp   | ArrowUp |
 | right arrow | 39                  | ArrowRight | ArrowRight |
 | down arrow  | 40                  | ArrowDown  | ArrowDown |
+| print screen| 44                  | PrintScreen  | PrintScreen |
 | insert      | 45                  | Insert    | Insert |
 | delete      | 46                  | Delete    | Delete |
 | 0 | 48 | 0 | Digit0 | 
