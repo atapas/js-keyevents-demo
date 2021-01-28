@@ -54,24 +54,24 @@ function addRow(event) {
     const cell = row.insertCell(counter);
     cell.innerHTML = `<span class='v-${data[counter]}'>${data[counter]}</span>`;
   }
-  // window.scrollTo(0, document.body.scrollHeight);
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 const clearAll = (event) => {
   document.getElementById("event-table-body").innerHTML = "";
   document.getElementById("key-id").innerHTML = "";
-  document.getElementById('type-here').value = '';
+  // document.getElementById('app').value = '';
 };
 
-document.getElementById('type-here').addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function (event) {
   keydownOn && addRow(event);
 });
 
-document.getElementById('type-here').addEventListener("keyup", function (event) {
+document.addEventListener("keyup", function (event) {
   keyupOn && addRow(event);
 });
 
-document.getElementById('type-here').addEventListener("keypress", function (event) {
+document.addEventListener("keypress", function (event) {
   keypressOn && addRow(event);
 });
 
@@ -99,6 +99,3 @@ document
     keyupOn = document.getElementById("keyup-cb-id").checked;
 });
 
-window.onload = function() {
-  document.getElementById("type-here").focus();
-};
