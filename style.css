@@ -132,3 +132,33 @@ table tbody tr.active-row {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
+.dialog-content {
+  height: 300px;
+  overflow: auto;
+}
+
+dialog::backdrop {
+  background: repeating-linear-gradient(
+    30deg,
+    rgba(24, 194, 236, 0.2),
+    rgba(24, 194, 236, 0.2) 1px,
+    rgba(24, 194, 236, 0.3) 1px,
+    rgba(24, 194, 236, 0.3) 20px
+  );
+  backdrop-filter: blur(1px)
+}
+
+button {
+  height: 25px;
+  background-color: #31a1fa;
+  color: #FFF;
+  border: 1px solid #008eff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.close {
+  background-color: rgba(255, 30, 0, 0.897);
+  border: 1px solid #ff006f;
+}

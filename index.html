@@ -7,6 +7,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./favs/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favs/favicon-16x16.png">
 	<link rel="manifest" href="./favs/site.webmanifest">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,8 @@
 
 			<div class="results">
 				<div class="clearAll">
-					<a href="#" id="clear-all-id">Clear All</a>
+					<button id="clear-all-id">Clear All</button>
+					<button id="see-details-id">Show All Key Code</button>
 				</div>
 				<div class="note">
 					<h2>
@@ -47,36 +49,63 @@
 				</div>
 
 				<div class="note key" id="key-id"></div>
-				<table id="event-table">
-					<thead>
-						<tr class="legend">
-							<th></th>
-							<th colspan="3" class="legacy">Legacy/Obsolete</th>
-							<th colspan="2" class="current">Current</th>
-							<th colspan="5" class="modifier">Modifiers</th>
-						</tr>
-						<tr>
-							<th class="type">Event Type</th>
-							<th class="legacy">event.which</th>
-							<th class="legacy">event.keyCode</th>
-							<th class="legacy">event.charCode</th>
-							<th class="current">Key</th>
-							<th class="current">Code</th>
-							<th class="modifier">Shift Key?</th>
-							<th class="modifier">Alt Key?</th>
-							<th class="modifier">Control Key?</th>
-							<th class="modifier">Meta Key?</th>
-							<th class="modifier">Modifier State</th>
-						</tr>
-					</thead>
-					<tbody id="event-table-body">
+					<table id="event-table">
+						<thead>
+							<tr class="legend">
+								<th></th>
+								<th colspan="3" class="legacy">Legacy/Obsolete</th>
+								<th colspan="2" class="current">Current</th>
+								<th colspan="5" class="modifier">Modifiers</th>
+							</tr>
+							<tr>
+								<th class="type">Event Type</th>
+								<th class="legacy">event.which</th>
+								<th class="legacy">event.keyCode</th>
+								<th class="legacy">event.charCode</th>
+								<th class="current">Key</th>
+								<th class="current">Code</th>
+								<th class="modifier">Shift Key?</th>
+								<th class="modifier">Alt Key?</th>
+								<th class="modifier">Control Key?</th>
+								<th class="modifier">Meta Key?</th>
+								<th class="modifier">Modifier State</th>
+							</tr>
+						</thead>
+						<tbody id="event-table-body">
 
-					</tbody>
-				</table>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
+	<dialog id="keyCodeDialog" style="width: 95%;">
+		<form method="dialog">
+			<div>
+				<h1>⌨️ Complete Key Code List</h1>
+				<h3>The table below lists all possible keys with code and other details.</h3>
+				<div class="dialog-content">
+					<table id="key-code-table">
+						<thead>
+							<tr>
+								<th>Key Name</th>
+								<th>event.which</th>
+								<th>event.key</th>
+								<th>event.code</th>
+								<th>Notes</th>
+							</tr>
+						</thead>
+						<tbody id="key-code-table-body">
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<menu style="float: right;">
+				<button id="keyCodeDlgClsId" class="close" value="Close">Close</button>
+			</menu>
+		</form>
+	</dialog>
 	<script src="./scripts/index.js"></script>
 </body>
 

@@ -1,7 +1,34 @@
 
+let keyCodeList = [];
 let keydownOn = true;
 let keypressOn = true;
 let keyupOn = true;
+
+$(document).ready(function(e) {
+  $.getJSON( "../keycode.json" , function( result ){
+    keyCodeList = result;
+    console.log({keyCodeList});
+    
+    for (let counter = 0; counter <= keyCodeList.length - 1; counter++) {
+      //const curIndx = document.getElementById("key-code-table-body").rows.length;
+      const row = document.getElementById("key-code-table-body").insertRow();
+      const cell0 = row.insertCell(0);
+      cell0.innerHTML = `<span>${keyCodeList[counter]['Key Name']}</span>`;
+
+      const cell1 = row.insertCell(1);
+      cell1.innerHTML = `<span>${keyCodeList[counter]['event.which']}</span>`;
+
+      const cell2 = row.insertCell(2);
+      cell2.innerHTML = `<span>${keyCodeList[counter]['event.key']}</span>`;
+
+      const cell3 = row.insertCell(3);
+      cell3.innerHTML = `<span>${keyCodeList[counter]['event.code']}</span>`;
+
+      const cell4 = row.insertCell(4);
+      cell4.innerHTML = `<span>${keyCodeList[counter]['Notes']}</span>`;
+    }
+  });
+});
 
 function getModifierState(event) {
   let modifier = "";
@@ -60,7 +87,6 @@ function addRow(event) {
 const clearAll = (event) => {
   document.getElementById("event-table-body").innerHTML = "";
   document.getElementById("key-id").innerHTML = "";
-  // document.getElementById('app').value = '';
 };
 
 document.addEventListener("keydown", function (event) {
@@ -79,6 +105,16 @@ document
   .getElementById("clear-all-id")
   .addEventListener("click", function (event) {
     clearAll(event);
+});
+
+document
+  .getElementById("see-details-id")
+  .addEventListener("click", function (event) {
+    if (typeof keyCodeDialog.showModal === "function") {
+      keyCodeDialog.showModal();
+    } else {
+      alert("The <dialog> API is not supported by this browser");
+    }
 });
 
 document
