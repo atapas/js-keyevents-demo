@@ -10,6 +10,11 @@ Optionally, you can also play around with it from here, [https://stackblitz.com/
 # 👍 Want to Motivate?
 Thanks for your time to reading this. Feel free to clone/fork/improve. Who doesn't want motivations? Give the project a star(⭐) if you liked the work.
 
+## Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
+
+[![Stargazers repo roster for @atapas/js-keyevents-demo](https://reporoster.com/stars/atapas/js-keyevents-demo)](https://github.com/atapas/js-keyevents-demo/stargazers)
+
+
 # 🖮 A List of Key Codes
 [Click Here](./KEYCODE.md) to see the list of key codes.
 
