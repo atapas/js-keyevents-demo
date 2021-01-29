@@ -113,7 +113,8 @@ document
     if (typeof keyCodeDialog.showModal === "function") {
       keyCodeDialog.showModal();
     } else {
-      alert("The <dialog> API is not supported by this browser");
+      console.warn("The <dialog> API is not supported by this browser");
+      $('#dialog-warning').show();
     }
 });
 
@@ -134,4 +135,40 @@ document
   .addEventListener("click", function (event) {
     keyupOn = document.getElementById("keyup-cb-id").checked;
 });
+
+document
+  .getElementById("export-to-csv")
+  .addEventListener("click", function (event) {
+    exportJSONToCSV(keyCodeList);
+});
+
+document
+  .getElementById("download-csv-link")
+  .addEventListener("click", function (event) {
+    exportJSONToCSV(keyCodeList);
+});
+
+function closeDialig() {
+  document.getElementById('keyCodeDialog').close();
+}
+
+function exportJSONToCSV(objArray) {
+  var arr = typeof objArray !== 'object' ? JSON.parse(objArray) : objArray;
+  var str =
+    `${Object.keys(arr[0])
+      .map((value) => `"${value}"`)
+      .join(',')}` + '\r\n';
+  var csvContent = arr.reduce((st, next) => {
+    st +=
+      `${Object.values(next)
+        .map((value) => `"${value}"`)
+        .join(',')}` + '\r\n';
+    return st;
+  }, str);
+  var element = document.createElement('a');
+  element.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvContent);
+  element.target = '_blank';
+  element.download = 'keyevent-details.csv';
+  element.click();
+}
 

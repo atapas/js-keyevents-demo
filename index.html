@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>JavaScript Keyboard Events</title>
+	<title>Keyzz - Keyboard Events Playground</title>
 	<link rel="stylesheet" href="./style.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="./favs/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favs/favicon-32x32.png">
@@ -19,8 +19,8 @@
 	</div>
 
 	<div id="app" class="container">
-		<h1>👋 JavaScript Keyboard Events</h1>
-		<h2>This demo works <u>only</u> with the Physical Keyboard ⌨️</h2>
+		<h1>👋 Keyzz - Keyboard Events Playground</h1>
+		<h2>It works <u>only</u> with the Physical Keyboard ⌨️</h2>
 		<div id="key">
 			<div class="filter">
 				Filter by:
@@ -41,6 +41,9 @@
 				<div class="clearAll">
 					<button id="clear-all-id">Clear All</button>
 					<button id="see-details-id">Show All Key Code</button>
+					<span id="dialog-warning" style="display: none">
+						The dialog API is not supported in this browser yet. <a href="#" id="download-csv-link">Click here to download</a> the details as CSV
+					</span>
 				</div>
 				<div class="note">
 					<h2>
@@ -80,31 +83,30 @@
 		</div>
 	</div>
 	<dialog id="keyCodeDialog" style="width: 95%;">
-		<form method="dialog">
-			<div>
-				<h1>⌨️ Complete Key Code List</h1>
-				<h3>The table below lists all possible keys with code and other details.</h3>
-				<div class="dialog-content">
-					<table id="key-code-table">
-						<thead>
-							<tr>
-								<th>Key Name</th>
-								<th>event.which</th>
-								<th>event.key</th>
-								<th>event.code</th>
-								<th>Notes</th>
-							</tr>
-						</thead>
-						<tbody id="key-code-table-body">
+		<div>
+			<h1>⌨️ Complete Key Code List</h1>
+			<h3>The table below lists all possible keys with code and other details.</h3>
+			<button id="export-to-csv">Export to CSV</button>
+			<div class="dialog-content">
+				<table id="key-code-table">
+					<thead>
+						<tr>
+							<th>Key Name</th>
+							<th>event.which</th>
+							<th>event.key</th>
+							<th>event.code</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody id="key-code-table-body">
 
-						</tbody>
-					</table>
-				</div>
+					</tbody>
+				</table>
 			</div>
-			<menu style="float: right;">
-				<button id="keyCodeDlgClsId" class="close" value="Close">Close</button>
-			</menu>
-		</form>
+		</div>
+		<menu style="float: right;">
+			<button id="keyCodeDlgClsId" onclick="closeDialig()" class="close" value="Close">Close</button>
+		</menu>
 	</dialog>
 	<script src="./scripts/index.js"></script>
 </body>
