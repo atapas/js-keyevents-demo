@@ -1,10 +1,11 @@
 # js-keycodes-demo
 👋 Hey there! Get to know all about the key events just with a key stroke.
 # 🚀 Live demo
-The app is deployed using Netlify. You can play around with it from here,
-[https://keyevents.netlify.app/](https://keyevents.netlify.app/)
+The app is deployed using Vercel and Netlify. You can play around with it from here,
+- [https://js-keyevents-demo.vercel.app/](https://js-keyevents-demo.vercel.app/)
+- [https://keyevents.netlify.app/](https://keyevents.netlify.app/)
 
-Demo Health Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/246b2856-19c2-4886-b2e3-81417556e204/deploy-status)](https://app.netlify.com/sites/keyevents/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/246b2856-19c2-4886-b2e3-81417556e204/deploy-status)](https://app.netlify.com/sites/keyevents/deploys)
 
 Optionally, you can also play around with it from here, [https://stackblitz.com/edit/js-keycodes?file=index.js](https://stackblitz.com/edit/js-keycodes?file=index.js)
 # 👍 Want to Motivate?
