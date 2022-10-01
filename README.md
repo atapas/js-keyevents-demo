@@ -1,4 +1,4 @@
-# js-keycodes-demo
+# js-keyevents-demo
 👋 Hey there! Get to know all about the key events just with a key stroke.
 # 🚀 Live demo
 The app is deployed using Vercel and Netlify. You can play around with it from here,
