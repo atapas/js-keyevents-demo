@@ -1,7 +1,7 @@
 
 # 🖮 Key Code List
 
-- `event.which` is leacy(or outdated)
+- `event.which` is legacy(or outdated)
 - The `event.code` value is same for small letters(a) and capital letters(A). Hoever the `event.key` value represents the actual letter.
 - The `event.which` value is different in Firefox(FF) and any other browsers for the keys, `equal(=)`, `semicolon(;)`, and `dash/minus(-)`
 
