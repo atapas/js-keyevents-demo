@@ -162,3 +162,10 @@ button.close {
   background-color: rgba(255, 30, 0, 0.897);
   border: 1px solid #ff006f;
 }
+
+.dialog-table-header {
+	border-bottom: 1px solid #cdd1ce;
+	position: sticky;
+	top: 0;
+	background: white;
+}
