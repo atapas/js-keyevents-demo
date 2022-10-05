@@ -1,11 +1,11 @@
 body {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 h1,
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
 }
 
 table {
@@ -78,19 +78,19 @@ table tbody tr.active-row {
   font-size: 60px;
   background-color: #ec10d1;
   color: #ffffff;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 5px;
 }
 
 .hint {
   margin-top: 5px;
   margin-left: 5px;
-  color: #767474;
+  color: #918e8ebb;
 }
 
 .results {
   margin: 10px 5px 0px 5px;
-  background-color: #ebebeb;
+  background-color: #a09f9fa1;
   padding: 10px;
   border-radius: 4px;
   overflow: auto;
@@ -127,7 +127,7 @@ table tbody tr.active-row {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #000000;
-  background-color: #ebebeb;
+  background-color: #a7a6a6d8;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -152,13 +152,13 @@ dialog::backdrop {
 button {
   height: 25px;
   background-color: #31a1fa;
-  color: #FFF;
+  color: rgb(180, 180, 180);
   border: 1px solid #008eff;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button.close {
-  background-color: rgba(255, 30, 0, 0.897);
-  border: 1px solid #ff006f;
+  background-color: rgba(218, 25, 0, 0.897);
+  border: 1px solid #da025f;
 }
