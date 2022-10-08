@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFFF;
+ background: radial-gradient(circle 80px, #56ab2f, #a8e063);
   color: #000000;
 }
 
@@ -7,7 +7,10 @@ h1,
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
+#center{
+margin:15px;
+  text-align: center;
+}
 table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -29,9 +32,21 @@ table thead tr.legend th {
 }
 
 table thead tr th.type {
-  background-color: #3498db;
+  background-color: #567c96;
   color: #ffffff;
 }
+#keyCodeDialog{
+text-align: center;;
+background:#474B4F;
+}
+#keyCodeDialog button{
+
+background:#86C232;}
+#keyCodeDialog h1,h3{
+
+  color:rgb(101, 187, 154);
+}
+
 
 table thead tr th.legacy {
   background-color: #f8f3ef;
@@ -119,7 +134,19 @@ table tbody tr.active-row {
   right: 0;
   top: 0;
 }
+.clearAll{
+display:flex;
+justify-content: space-around;
 
+}
+button{
+margin:4px;
+padding:15px;
+text-align: center;
+display:flex;
+justify-content: center;
+align-items: center;
+}
 .input-here {
   width: 80%;
   height: 50px;
