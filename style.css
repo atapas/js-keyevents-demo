@@ -46,9 +46,7 @@ background:#3e6657;}
 
   color:rgb(101, 187, 154);
 }
- span {
-  color:pink
-}
+
 
 table thead tr th.legacy {
   background-color: #f8f3ef;
@@ -75,9 +73,14 @@ table tbody tr {
 }
 
 table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: rgb(221, 27, 60);
+  color:rgb(241, 203, 216)
 }
 
+table tbody tr:nth-of-type(odd) {
+  background-color: rgba(1, 80, 18, 0.377);
+  color:rgb(15, 13, 14)
+}
 table tbody tr:last-of-type {
   border-bottom: 2px solid #3498db;
 }
