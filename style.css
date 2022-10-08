@@ -1,5 +1,5 @@
 body {
- background: radial-gradient(circle 80px, #56ab2f, #a8e063);
+ background: radial-gradient(circle  80px, #56ab2f, #a8e063);
   color: #000000;
 }
 
@@ -40,13 +40,15 @@ text-align: center;;
 background:#474B4F;
 }
 #keyCodeDialog button{
-
-background:#86C232;}
+border:none;
+background:#3e6657;}
 #keyCodeDialog h1,h3{
 
   color:rgb(101, 187, 154);
 }
-
+ span {
+  color:pink
+}
 
 table thead tr th.legacy {
   background-color: #f8f3ef;
