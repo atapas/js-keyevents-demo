@@ -170,3 +170,16 @@ function exportJSONToCSV(objArray) {
   element.click();
 }
 
+const scrollTopBtn = document.querySelector("#scroll-top-wrapper");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    scrollTopBtn.setAttribute("style", "display: block;");
+  } else {
+    scrollTopBtn.setAttribute("style", "display: none;");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
