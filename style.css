@@ -1,5 +1,6 @@
 body {
- background: radial-gradient(circle  80px, #56ab2f, #a8e063);
+  background:linear-gradient(#c6ea8d,#fe90af);
+
   color: #000000;
 }
 
@@ -27,21 +28,23 @@ table thead tr {
 
 table thead tr.legend,
 table thead tr.legend th {
-  border: 1px solid #ffffff;
+ background: linear-gradient(#e0ad64,#f7A5cb);
   text-align: center;
 }
 
 table thead tr th.type {
-  background-color: #567c96;
-  color: #ffffff;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
+  color: #070707;
 }
 #keyCodeDialog{
 text-align: center;;
-background:#474B4F;
+background: linear-gradient(#3E5151,#DECBA4);
 }
 #keyCodeDialog button{
 border:none;
-background:#3e6657;}
+background: linear-gradient(45deg, red, black);
+}
 #keyCodeDialog h1,h3{
 
   color:rgb(101, 187, 154);
@@ -49,18 +52,22 @@ background:#3e6657;}
 
 
 table thead tr th.legacy {
-  background-color: #f8f3ef;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
   color: #000000;
 }
 
 table thead tr th.current {
-  background-color: #62da2a;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
   color: #000000;
 }
 
 table thead tr th.modifier {
-  background-color: #e7ad09;
-  color: #ffffff;
+/* background: linear-gradient(-45deg,#9e1f63,#392d91); */
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
+  color: #030303;
 }
 
 table th,
@@ -69,17 +76,18 @@ table td {
 }
 
 table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ff0b0b;
 }
 
 table tbody tr:nth-of-type(even) {
-  background-color: rgb(221, 27, 60);
-  color:rgb(241, 203, 216)
+  background: linear-gradient(45deg, red, black);
+  color:whitesmoke
 }
 
 table tbody tr:nth-of-type(odd) {
-  background-color: rgba(1, 80, 18, 0.377);
-  color:rgb(15, 13, 14)
+  background: linear-gradient(45deg, black,red);
+
+  color:rgb(224, 218, 221)
 }
 table tbody tr:last-of-type {
   border-bottom: 2px solid #3498db;
@@ -96,7 +104,8 @@ table tbody tr.active-row {
 
 .key mark {
   font-size: 60px;
-  background-color: #ec10d1;
+background: linear-gradient(45deg, red, black);
+
   color: #ffffff;
   border-radius: 3px;
   padding: 5px;
@@ -110,7 +119,7 @@ table tbody tr.active-row {
 
 .results {
   margin: 10px 5px 0px 5px;
-  background-color: #ebebeb;
+background:linear-gradient(#bff098,#6fd6ff);
   padding: 10px;
   border-radius: 4px;
   overflow: auto;
@@ -151,6 +160,7 @@ text-align: center;
 display:flex;
 justify-content: center;
 align-items: center;
+background: linear-gradient(45deg, red, black);
 }
 .input-here {
   width: 80%;
