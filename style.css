@@ -1,5 +1,6 @@
 body {
-  background-color: #FFFFFF;
+  background:linear-gradient(#c6ea8d,#fe90af);
+
   color: #000000;
 }
 
@@ -7,7 +8,10 @@ h1,
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
+#center{
+margin:15px;
+  text-align: center;
+}
 table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -24,28 +28,46 @@ table thead tr {
 
 table thead tr.legend,
 table thead tr.legend th {
-  border: 1px solid #ffffff;
+ background: linear-gradient(#e0ad64,#f7A5cb);
   text-align: center;
 }
 
 table thead tr th.type {
-  background-color: #3498db;
-  color: #ffffff;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
+  color: #070707;
+}
+#keyCodeDialog{
+text-align: center;;
+background: linear-gradient(#3E5151,#DECBA4);
+}
+#keyCodeDialog button{
+border:none;
+background: linear-gradient(45deg, red, black);
+}
+#keyCodeDialog h1,h3{
+
+  color:rgb(101, 187, 154);
 }
 
+
 table thead tr th.legacy {
-  background-color: #f8f3ef;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
   color: #000000;
 }
 
 table thead tr th.current {
-  background-color: #62da2a;
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
   color: #000000;
 }
 
 table thead tr th.modifier {
-  background-color: #e7ad09;
-  color: #ffffff;
+/* background: linear-gradient(-45deg,#9e1f63,#392d91); */
+ background: linear-gradient(#e0ad64,#f7A5cb);
+
+  color: #030303;
 }
 
 table th,
@@ -54,13 +76,19 @@ table td {
 }
 
 table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ff0b0b;
 }
 
 table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background: linear-gradient(45deg, red, black);
+  color:whitesmoke
 }
 
+table tbody tr:nth-of-type(odd) {
+  background: linear-gradient(45deg, black,red);
+
+  color:rgb(224, 218, 221)
+}
 table tbody tr:last-of-type {
   border-bottom: 2px solid #3498db;
 }
@@ -76,7 +104,8 @@ table tbody tr.active-row {
 
 .key mark {
   font-size: 60px;
-  background-color: #ec10d1;
+background: linear-gradient(45deg, red, black);
+
   color: #ffffff;
   border-radius: 3px;
   padding: 5px;
@@ -90,7 +119,7 @@ table tbody tr.active-row {
 
 .results {
   margin: 10px 5px 0px 5px;
-  background-color: #ebebeb;
+background:linear-gradient(#bff098,#6fd6ff);
   padding: 10px;
   border-radius: 4px;
   overflow: auto;
@@ -119,7 +148,20 @@ table tbody tr.active-row {
   right: 0;
   top: 0;
 }
+.clearAll{
+display:flex;
+justify-content: space-around;
 
+}
+button{
+margin:4px;
+padding:15px;
+text-align: center;
+display:flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(45deg, red, black);
+}
 .input-here {
   width: 80%;
   height: 50px;

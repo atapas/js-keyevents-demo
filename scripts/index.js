@@ -5,7 +5,7 @@ let keypressOn = true;
 let keyupOn = true;
 
 $(document).ready(function(e) {
-  $.getJSON( "../keycode.json" , function( result ){
+  $.getJSON( "./keycode.json" , function( result ){
     keyCodeList = result;
     console.log({keyCodeList});
     
