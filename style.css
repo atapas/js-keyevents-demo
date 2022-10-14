@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600&display=swap');
+body{
+  margin: 1% 4%;
+  font-family: Poppins, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.results{
+  padding: 5%;
+}
+
+.legend{
+  border-bottom: 2px solid #3498db;
+}
+
+#note-heading{
+  text-align: center;
+}
+
+button{
+  height: 30px;
+}
+
+
 body {
   background-color: #FFFFFF;
   color: #000000;
@@ -5,7 +28,7 @@ body {
 
 h1,
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Poppins, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 table {
@@ -91,7 +114,6 @@ table tbody tr.active-row {
 .results {
   margin: 10px 5px 0px 5px;
   background-color: #ebebeb;
-  padding: 10px;
   border-radius: 4px;
   overflow: auto;
 }
@@ -150,7 +172,6 @@ dialog::backdrop {
 }
 
 button {
-  height: 25px;
   background-color: #31a1fa;
   color: #FFF;
   border: 1px solid #008eff;

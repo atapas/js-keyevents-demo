@@ -13,14 +13,10 @@
 
 <body>
 	<div class="git-ribbon">
-		<a href="https://github.com/atapas/js-keycodes-demo" target="_blank"><img loading="lazy" width="149"
-			height="149"
-			src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149"
-			class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-	</div>
+		<a href="https://github.com/atapas/js-keycodes-demo" target="_blank"><img loading="lazy" width="200" height="200" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a></div>
 
 	<div id="app" class="container">
-		<h1>👋 Keyzz - Keyboard Events Playground</h1>
+		<h1 id="note-heading">👋 Keyzz - Keyboard Events Playground</h1>
 		<h2>It works <u>only</u> with the Physical Keyboard ⌨️</h2>
 		<div id="key">
 			<div class="filter">
@@ -61,7 +57,7 @@
 								<th colspan="2" class="current">Current</th>
 								<th colspan="5" class="modifier">Modifiers</th>
 							</tr>
-							<tr>
+							<tr class="legend">
 								<th class="type">Event Type</th>
 								<th class="legacy">event.which</th>
 								<th class="legacy">event.keyCode</th>
