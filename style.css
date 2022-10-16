@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
   background-color: #FFFFFF;
   color: #000000;
@@ -5,17 +7,19 @@ body {
 
 h1,
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Montserrat',sans-serif;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 table {
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
+  margin: 2.5vw 0;
+  font-size: 0.9vw;
   font-family: sans-serif;
-  min-width: 400px;
+  min-width: 40vw;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  width: 100%;
+  width: 90%;
 }
 
 table thead tr {
@@ -50,7 +54,7 @@ table thead tr th.modifier {
 
 table th,
 table td {
-  padding: 12px 15px;
+  padding: 1.2vw 1.5vw;
 }
 
 table tbody tr {
@@ -75,7 +79,7 @@ table tbody tr.active-row {
 }
 
 .key mark {
-  font-size: 60px;
+  font-size: 6vw;
   background-color: #ec10d1;
   color: #ffffff;
   border-radius: 3px;
@@ -86,6 +90,7 @@ table tbody tr.active-row {
   margin-top: 5px;
   margin-left: 5px;
   color: #767474;
+  font-size: 1.2vw;
 }
 
 .results {
@@ -104,6 +109,7 @@ table tbody tr.active-row {
 
 .filter {
   margin-left: 5px;
+  font-size: 0.8vw;
 }
 
 .v-false {
@@ -150,11 +156,11 @@ dialog::backdrop {
 }
 
 button {
-  height: 25px;
+  height: 2.5vw;
   background-color: #31a1fa;
   color: #FFF;
   border: 1px solid #008eff;
-  border-radius: 4px;
+  border-radius: 0.5vw;
   cursor: pointer;
 }
 
@@ -177,8 +183,8 @@ button.close {
 #scroll-top-button {
   float: right;
   background-color: #3498db;
-  padding: 10px;
+  padding: 1vw;
   border-radius: 100%;
-  font-size: 20px;
+  font-size: 2vw;
   color: white;
 }
