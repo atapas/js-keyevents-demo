@@ -85,7 +85,8 @@ table tbody tr.active-row {
 .hint {
   margin-top: 5px;
   margin-left: 5px;
-  color: #767474;
+  color: #ff0000;
+  font-weight: bold;
 }
 
 .results {
@@ -100,6 +101,7 @@ table tbody tr.active-row {
   align-content: center;
   display: flex;
   justify-content: center;
+  color: #f3f3f3;
 }
 
 .filter {
@@ -111,7 +113,7 @@ table tbody tr.active-row {
 }
 
 .v-true {
-  color: green;
+  color:#3498db ;
 }
 
 .git-ribbon {
@@ -181,4 +183,10 @@ button.close {
   border-radius: 100%;
   font-size: 20px;
   color: white;
+}
+
+
+.bg-color {
+  background-color: #e7ad09;
+  color: #ffffff;
 }
