@@ -146,7 +146,7 @@ document
     exportJSONToCSV(keyCodeList);
 });
 
-function closeDialig() {
+function closeDialog() {
   document.getElementById('keyCodeDialog').close();
 }
 
