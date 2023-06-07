@@ -62,8 +62,7 @@ function getModifierState(event) {
 
 function addRow(event) {
   document.getElementById("key-id").innerHTML = `<mark>${event.key}</mark>`;
-  const curIndx = document.getElementById("event-table-body").rows.length;
-  const row = document.getElementById("event-table-body").insertRow(curIndx);
+  const row = document.getElementById("event-table-body").insertRow(0);
   const data = [
     event.type,
     event.which,
@@ -81,7 +80,6 @@ function addRow(event) {
     const cell = row.insertCell(counter);
     cell.innerHTML = `<span class='v-${data[counter]}'>${data[counter]}</span>`;
   }
-  window.scrollTo(0, document.body.scrollHeight);
 }
 
 const clearAll = (event) => {
@@ -224,3 +222,16 @@ function table_sort() {
 }
 
 table_sort()
+const scrollTopBtn = document.querySelector("#scroll-top-wrapper");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    scrollTopBtn.setAttribute("style", "display: block;");
+  } else {
+    scrollTopBtn.setAttribute("style", "display: none;");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

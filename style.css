@@ -163,9 +163,29 @@ button.close {
   border: 1px solid #ff006f;
 }
 
+
 .dialog-table-header {
 	border-bottom: 1px solid #cdd1ce;
 	position: sticky;
 	top: 0;
 	background: white;
+}
+#scroll-top-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+#scroll-top-wrapper:hover {
+  cursor: pointer;
+}
+
+#scroll-top-button {
+  float: right;
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 100%;
+  font-size: 20px;
+  color: white;
 }
