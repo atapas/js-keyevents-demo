@@ -1,0 +1,130 @@
+<html>
+
+<head>
+	<title>Keyzz - Keyboard Events Playground</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favs/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favs/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favs/favicon-16x16.png">
+	<link rel="manifest" href="./favs/site.webmanifest">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+	<div class="git-ribbon">
+		<a href="https://github.com/atapas/js-keycodes-demo" target="_blank"><img loading="lazy" width="149"
+			height="149"
+			src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149"
+			class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+	</div>
+
+	<div id="app" class="container">
+		<h1 class="flex">👋 Keyzz - Keyboard Events Playground</h1>
+		<h2 class="flex">It works <u class="mx-2">only</u> with the Physical Keyboard ⌨️</h2>
+		<div id="key">
+			<div class="filter flex">
+				<div class="mx-2">Filter by:</div>
+				<div class="mx-2">
+					<input  type="checkbox" id="keydown-cb-id" name="keydown-cb" checked>
+					<label for="keydown-cb-id">Keydown</label>
+				</div>
+				<div class="mx-2">
+					<input  type="checkbox" id="keypress-cb-id" name="keypress-cb" checked>
+					<label for="keypress-cb-id">Keypress</label>
+				</div>
+				<div class="mx-2">
+					<input  type="checkbox" id="keyup-cb-id" name="keyup-cb" checked>
+					<label for="keyup-cb-id">Keyup</label>
+				</div>
+			</div>
+			<div class="hint flex">
+				Hint: The above filtering reflects from the next key type.
+			</div>
+
+			<div class="results">
+				<div class="clearAll flex ">
+					<button id="clear-all-id" class="btn-main">Clear All</button>
+					<button id="see-details-id" class="btn-main mx-2">Show All Key Code</button>
+					<span id="dialog-warning" style="display: none">
+						The dialog API is not supported in this browser yet. <a href="#" id="download-csv-link">Click here to download</a> the details as CSV
+					</span>
+				</div>
+				<div class="note">
+					<h2>
+						Focus anywhere and use any Keys on your Physical Keyboard ⌨️
+					</h2>						
+				</div>
+
+				<div class="note key" id="key-id"></div>
+					<table id="event-table">
+						<thead>
+							<tr class="legend">
+								<th></th>
+								<th colspan="3" class="legacy">Legacy/Obsolete</th>
+								<th colspan="2" class="current">Current</th>
+								<th colspan="5" class="modifier">Modifiers</th>
+							</tr>
+							<tr>
+								<th class="type ">Event Type</th>
+								<th class="legacy ">event.which</th>
+								<th class="legacy ">event.keyCode</th>
+								<th class="legacy ">event.charCode</th>
+								<th class="current ">Key</th>
+								<th class="current ">Code</th>
+								<th class="modifier ">Shift Key?</th>
+								<th class="modifier ">Alt Key?</th>
+								<th class="modifier ">Control Key?</th>
+								<th class="modifier ">Meta Key?</th>
+								<th class="modifier ">Modifier State</th>
+							</tr>
+						</thead>
+						<tbody id="event-table-body">
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<dialog id="keyCodeDialog" style="width: 95%;">
+		<div>
+			<h1>⌨️ Complete Key Code List</h1>
+			<h3>The table below lists all possible keys with code and other details.</h3>
+			<button id="export-to-csv">Export to CSV</button>
+			<div class="dialog-content">
+				<table id="key-code-table">
+					<thead>
+						<tr>
+							<th>Key Name</th>
+							<th>event.which</th>
+							<th>event.key</th>
+							<th>event.code</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+					<tbody id="key-code-table-body">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<menu style="float: right;">
+			<button id="keyCodeDlgClsId" onclick="closeDialig()" class="close" value="Close">Close</button>
+		</menu>
+	</dialog>
+
+	<div id="scroll-top-wrapper">
+		<div id="scroll-top-button">
+			<i class="fas fa-arrow-up"></i>
+		</div>
+	</div>
+
+	<script src="./scripts/index.js"></script>
+</body>
+
+</html>
